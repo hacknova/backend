@@ -1,0 +1,36 @@
+{
+  "name": "hacknova-backend",
+  "version": "1.0.0",
+  "description": "MyMLH powered backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacknova/backend.git"
+  },
+  "keywords": [
+    "hackathon",
+    "hacknova",
+    "backend",
+    "mymlh"
+  ],
+  "author": "Jared Allard <president@hacknova.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hacknova/backend/issues"
+  },
+  "homepage": "https://github.com/hacknova/backend#readme",
+  "dependencies": {
+    "aqb": "^2.1.0",
+    "arangojs": "^5.2.0",
+    "async": "^2.1.2",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "node-slackr": "^0.1.4",
+    "request": "^2.78.0",
+    "sendgrid": "^4.7.1"
+  }
+}
