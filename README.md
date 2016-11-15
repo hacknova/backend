@@ -22,6 +22,14 @@ A backend for said Hackathon
 
 ## Setup
 
+### yarn
+
+```bash
+yarn
+```
+
+### npm
+
 ```bash
 npm install
 ```
