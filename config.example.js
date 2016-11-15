@@ -67,7 +67,8 @@ module.exports = {
    * Sentry Intergration
    **/
   "sentry": {
-    "enabled": true
+    "enabled": true,
+    "DSN": "dsn"
   },
 
   /**

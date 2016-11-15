@@ -10,6 +10,8 @@ const express = require('express');
 const fs      = require('fs');
 const path    = require('path');
 const bodyP   = require('body-parser');
+const debug   = require('debug')('backend');
+const raven   = require('raven');
 const Slack   = require('node-slackr');
 const cors    = require('cors');
 
@@ -27,6 +29,14 @@ const config  = require('./config.js');
 /**
  * PRE INIT
  **/
+
+
+// Sentry Error reporting
+if(config.sentry.enabled) {
+  debug('sentry', 'enabled')
+  let client = new raven.Client(config.sentry.DSN)
+  client.patchGlobal();
+}
 
 // Setup Our Libs.
 let mlh       = new MyMLH();
