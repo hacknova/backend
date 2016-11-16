@@ -93,4 +93,8 @@ routes.forEach(Route => {
   app.use(`/v1/${name}`, final);
 })
 
+app.get('/', (req, res) => {
+  return res.error('?')
+})
+
 app.listen(config.server.port);
