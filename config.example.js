@@ -31,6 +31,7 @@ module.exports = {
    **/
   "event": {
     "name": "HackNova",
+    "study": "", // Level of Study To LImit too, see MyMLH
     "limit": 100 // Limit to 100 people.
   },
 
