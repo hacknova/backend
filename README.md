@@ -55,3 +55,7 @@ This is really only needed for developers, so instructions too come...
 Instead of using npm (which still works) we use yarn which is 10000x faster (at least so it feels)
 yarn.lock is used by yarn to isolate versions, urls, etc. We keep it to make sure
 the yarn installs are fast as possible.
+
+## License
+
+MIT
