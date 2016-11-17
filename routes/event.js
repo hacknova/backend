@@ -7,8 +7,9 @@
 const debug = require('debug')('backend:route:event');
 
 module.exports = (Router, config, data) =>{
+  let auth = data.auth;
 
-  Router.get('/', (req, res) => {
+  Router.get('/', auth.express(), (req, res) => {
       return res.send(config.event);
   })
 
