@@ -36,6 +36,9 @@ npm install
 
 Modify the config, and run ArangoDB. There will be a docker-compose file soon.
 
+If you're re-creating this, don't forget to delete `.not-init` to make sure you
+can create an admin user.
+
 ## Setting up SendGrid
 
 First get an account from SendGrid, then grab the API Key (from LINK). Create a template

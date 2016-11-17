@@ -23,6 +23,7 @@ const Db      = require('./lib/db.js');
 const Hn      = require('./lib/hn.js');
 const resp    = require('./lib/response.js');
 const SendGrd = require('./lib/email.js');
+const Auth    = require('./lib/auth.js');
 
 
 // Config
@@ -31,6 +32,9 @@ const config  = require('./config.js');
 /**
  * PRE INIT
  **/
+
+const initfile = path.join(__dirname, '.not-init');
+if(fs.existsSync(initfile)) config.init = false;
 
 
 // Sentry Error reporting
@@ -45,6 +49,7 @@ let mlh       = new MyMLH();
 let db        = new Db(config);
 let hn        = new Hn(db, mlh, config);
 let sg        = new SendGrd(config);
+let auth      = new Auth(config, db, hn);
 
 // Set auth for MLH lib
 mlh.setAuth(config.mymlh.id, config.mymlh.secret);
@@ -61,6 +66,7 @@ let data = {
   hn:  hn,
   db:  db,
   sg:  sg,
+  auth: auth,
   slack: slack
 }
 

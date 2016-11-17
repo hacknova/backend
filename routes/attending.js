@@ -10,11 +10,12 @@ module.exports = (Router, config, data) =>{
   let hn    = data.hn;
   let sg    = data.sg;
   let slack = data.slack;
+  let auth  = data.auth;
 
   /**
    * Get who's attending.
    **/
-  Router.get('/', (req, res) => {
+  Router.get('/', auth.express(), (req, res) => {
     hn.get((err, data) => {
       if(err) return res.error(err);
 
